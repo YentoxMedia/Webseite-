@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KW1 23</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="script.js" />
+</head>
+
+<style>
+  /* Styling for the image viewer */
+  .image-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    display: none;
+  }
+
+  .image-viewer img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+</style>
+
+<body>
+  <div class="Mitte">
+    <header>
+      <div class="banner">
+        <img src="medien/Logo.png" alt="Banner">
+        <div class="Überschrift">
+          <h1>Mediendesign</h1>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"><button class="button">Startseite</button></a>
+          </li>
+          <li><a href=""><button class="buttongrau">Mediendesign</button></a></li>
+          <li><a href="vi.html"><button class="buttonstandard">Videotechnik</button></a></li>
+          <li><a href="privates.html"><button class="buttonstandard">Privates</button></a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <div class="image-viewer">
+    <img id="viewed-image" src="" onclick="closeImageViewer()" />
+  </div>
+
+  <main>
+    <div class="scroll-window">
+      <br>
+      <div class="Überschrift">
+        <h1>C4D Einführung</h1>
+      </div>
+      <img src="medien/Fernsehturm_Peer.jpg" alt="Rendering meines Projektes" width="640" height="360"
+        onclick="openImageViewer(this.src)">
+      <img src="medien/haus Peer.jpg" alt="Rendering meines Projektes" width="640" height="360"
+        onclick="openImageViewer(this.src)">
+      <div class="Überschrift">
+        <h1>1. Halbjahres Abschlussprojekt (Cyberpunk-Haus)</h1>
+      </div>
+      <img src="medien/Standbild1_Kamera_Peer.jpg" alt="Rendering meines Projektes" width="640" height="360"
+        onclick="openImageViewer(this.src)">
+      <video src="medien/NeoBerlin_Animation_Peer.mp4" width="480" height="360" controls>
+        Ihr Browser kann dieses Video nicht wiedergeben.<br />
+      </video>
+      <img src="medien/Standbild2_Kamera1_Peer.jpg" alt="Rendering meines Projektes" width="640" height="360"
+        onclick="openImageViewer(this.src)">
+      <img src="medien/Standbild3_Kamera2_Peer.jpg" alt="Rendering meines Projektes" width="640" height="360"
+        onclick="openImageViewer(this.src)">
+      <img src="medien/Standbild4_Kamera3_Peer.jpg" alt="Rendering meines Projektes" width="640" height="360"
+        onclick="openImageViewer(this.src)">
+      <img src="medien/Standbild1_Kamera4_Peer.jpg" alt="Rendering meines Projektes" width="640" height="360"
+        onclick="openImageViewer(this.src)">
+    </div>
+  </main>
+
+  <footer>
+    <div id="footer">
+      <b>Kontaktdaten:<br></b>
+      <br>
+      E-Mail: peer.rutz@oszkim.de / rutzpeer@gmail.com<br>
+      Telefon: 03065474049 /
+      Mobil: 015734815293
+      </p>
+  </footer>
+
+  <script>
+    function openImageViewer(imageSrc) {
+      document.getElementById("viewed-image").src = imageSrc;
+      document.querySelector(".image-viewer").style.display = "block";
+    }
+    function closeImageViewer() {
+      document.querySelector(".image-viewer").style.display = "none";
+    }
+  </script>
+</body>
+
+</html>
